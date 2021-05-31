@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+version 'unspecified'
+group 'com.aginskiy'
+
+repositories {
+    mavenCentral()
+    maven { url "file://C:/Dmitriy/Projects/repo/"}
+}
+
+dependencies {
+    implementation 'com.aginskiy:utils:1.3.5'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
+
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    implementation 'com.google.guava:guava:30.0-jre'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
