@@ -6,10 +6,14 @@ import com.aginskiy.util.StringUtils;
 public class Utils {
 
     public static Boolean isAllPositiveNumbers(String... str) {
-        boolean isAllPositive = true;
-        for(String numStr : str) {
-            isAllPositive = StringUtils.isPositiveNumber(numStr);
+        if(str == null || str.length < 1) {
+            return false;
         }
-        return isAllPositive;
+        for(String numStr : str) {
+            if(!StringUtils.isPositiveNumber(numStr)) {
+                return false;
+            }
+        }
+        return true;
     }
 }

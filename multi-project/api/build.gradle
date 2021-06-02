@@ -15,7 +15,7 @@ version 'unspecified'
 
 repositories {
     mavenCentral()
-    maven { url "file://C:/Dmitriy/Projects/repo/"}
+    mavenLocal()
 }
 
 dependencies {
@@ -25,13 +25,10 @@ dependencies {
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
-    implementation 'com.google.guava:guava:30.0-jre'
-
     implementation project(':core')
 }
 
 application {
-    // Define the main class for the application.
     mainClass = 'com.aginskiy.api.App'
 }
 

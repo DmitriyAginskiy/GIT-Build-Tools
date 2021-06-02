@@ -7,7 +7,7 @@ group 'com.aginskiy'
 
 repositories {
     mavenCentral()
-    maven { url "file://C:/Dmitriy/Projects/repo/"}
+    mavenLocal()
 }
 
 dependencies {
@@ -16,8 +16,6 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.1'
 
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-
-    implementation 'com.google.guava:guava:30.0-jre'
 }
 
 tasks.named('test') {
